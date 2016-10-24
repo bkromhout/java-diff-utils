@@ -2,23 +2,23 @@
 
 The java-diff-utils library is for computing diffs, applying patches, generation side-by-side view in Java.
 
-It is an OpenSource library for performing the comparison operations between texts: computing diffs, applying patches, generating unified diffs or parsing them, generating diff output for easy future displaying (like side-by-side view) and so on.
+It is an open source library for performing comparison operations between chunks of text: computing diffs, applying patches, generating unified diffs or parsing them, generating diff output for easy future display (like a side-by-side view) and so on.
 
-Main reason to build this library was the lack of easy-to-use libraries with all the usual stuff you need while working with diff files. Originally it was inspired by JRCS library and it's nice design of diff module.
+The main reason for creating this library was the lack of easy-to-use libraries with all the usual features necessary for working with diff files. Originally it was inspired by the JRCS library and its nice diff module design.
 
 **Original code and docs were forked from:** [java-diff-utils](https://code.google.com/p/java-diff-utils/)
 
 ## Main Features
 
-* computing the difference between two texts.
-* capable to hand more than plain ascci. Arrays or List of any type that implements hashCode() and equals() correctly can be subject to differencing using this library
-* patch and unpatch the text with the given patch
-* parsing the unified diff format
-* producing human-readable differences
+* Computing the difference between two chunks of text.
+* Capable of handling more than plain ASCII. Arrays or Lists of any type that implement hashCode() and equals() correctly can be used as inputs for differencing using this library.
+* Patch and unpatch the text with the given patch.
+* Parsing the unified diff format.
+* Producing human-readable differences.
 
 ## Algorithms
 
-This library implements Myer's diff algorithm. But it can easily replaced by any other which is better for handing your texts.
+This library implements Myers' diff algorithm, but it is modular so it is easy to replace the algorithm with another which might be better suited to your needs.
 
 # Tutorial
 
@@ -33,7 +33,7 @@ This library implements Myer's diff algorithm. But it can easily replaced by any
 
 ### 2.1.0
 
-- Removes the dependency on Guavatime
+- Removes the dependency on Guava time
 
 ### 2.0.0
 
