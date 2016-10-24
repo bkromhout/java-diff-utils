@@ -457,8 +457,19 @@ public class DiffRowGenerator {
             }
         }
 
-        delta.getOriginal().setLines(Arrays.asList(Utils.join(origList, "").split(NEW_LINE)));
-        delta.getRevised().setLines(Arrays.asList(Utils.join(revList, "").split(NEW_LINE)));
+        delta.getOriginal().setLines(addMissingLines(origList, orig.size()));
+        delta.getRevised().setLines(addMissingLines(revList, rev.size()));
+    }
+
+    private List<String> addMissingLines(final List<String> lines, final int targetSize) {
+        List<String> tempList = Arrays.asList(Utils.join(lines, "").split(NEW_LINE));
+        if (tempList.size() < targetSize) {
+            tempList = new ArrayList<>(tempList);
+            while (tempList.size() < targetSize) {
+                tempList.add("");
+            }
+        }
+        return tempList;
     }
 
     private static final LinkedList<String> charArrayToStringList(char[] cs) {
