@@ -16,6 +16,24 @@ The main reason for creating this library was the lack of easy-to-use libraries 
 * Parsing the unified diff format.
 * Producing human-readable differences.
 
+## Installation
+
+Since version 2.1.1, this fork of java-diff-utils is hosted on Bintray's jcenter. This means you can add java-diff-utils as a dependency to your project using Gradle.
+
+Ensure that you have `jcenter()` defined as a repository:
+```groovy
+repositories {
+    jcenter()
+}
+```
+
+Then add java-diff-utils to your dependencies like this:
+```groovy
+dependencies {
+    compile 'com.github.bkromhout:java-diff-utils:{latest version}'
+}
+```
+
 ## Algorithms
 
 This library implements Myers' diff algorithm, but it is modular so it is easy to replace the algorithm with another which might be better suited to your needs.
