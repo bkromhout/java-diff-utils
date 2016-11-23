@@ -95,7 +95,7 @@ public class Chunk<T> {
     }
 
     /**
-     * Returns the index of the last line of the chunk. (zero-based numbering)
+     * @return the index of the last line of the chunk. (zero-based numbering)
      */
     @Nonnegative
     public int last() {

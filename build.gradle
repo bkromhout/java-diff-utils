@@ -1,40 +1,29 @@
-apply plugin: 'java'
-apply plugin: 'maven'
-
-group = 'com.github.java-diff-utils'
-version = '2.1.1'
-
-description = """java-diff-utils"""
-
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
-task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.4.0' // clean build uploadLib -PdryRun=false
+    }
 }
 
-javadoc {
-    failOnError = false
+ext {
+    if (file("private.properties").exists()) {
+        Properties props = new Properties()
+        props.load(new FileInputStream(file("private.properties")))
+        BINTRAY_KEY = props.getProperty('BINTRAY_KEY')
+    } else {
+        BINTRAY_KEY = ""
+    }
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
+task uploadLib {
+    dependsOn ':java-diff-utils-lib:bintrayUpload'
 }
 
-artifacts {
-    archives sourcesJar
-    archives javadocJar
-}
-
-repositories {
-     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-     maven { url "http://repo.maven.apache.org/maven2" }
-}
-
-dependencies {
-    compile group: 'com.google.code.findbugs', name: 'jsr305', version:'3.0.0'
-    testCompile group: 'org.hamcrest', name: 'hamcrest-library', version:'1.3'
-    testCompile group: 'junit', name: 'junit', version:'4.12'
+allprojects {
+    repositories {
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url "http://repo.maven.apache.org/maven2" }
+    }
 }

@@ -1,1 +1,2 @@
+include ':java-diff-utils-lib'
 rootProject.name = 'java-diff-utils'
