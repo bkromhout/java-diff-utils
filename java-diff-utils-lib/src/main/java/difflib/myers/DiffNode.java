@@ -1,15 +1,6 @@
 package difflib.myers;
 
 /**
- * <p>Title: </p>
- * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2002</p>
- * <p>Company: </p>
- * @author not attributable
- * @version 1.0
- */
-
-/**
  * A diffnode in a diffpath.
  * <p>
  * A DiffNode and its previous node mark a delta between
@@ -21,7 +12,6 @@ package difflib.myers;
  * node and each contiguous series of insertions and deletions is represented
  * by a single {@link DiffNode DiffNodes}.
  *
- * @version $Revision: 60 $ $Date: 2003-05-10 21:56:10 +0300 (Суб, 10 Май 2003) $
  * @author <a href="mailto:juanco@suigeneris.org">Juanco Anez</a>
  *
  */
