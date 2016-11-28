@@ -6,7 +6,8 @@ It is an open source library for performing comparison operations between chunks
 
 The main reason for creating this library was the lack of easy-to-use libraries with all the usual features necessary for working with diff files. Originally it was inspired by the JRCS library and its nice diff module design.
 
-**Original code and docs were forked from:** [java-diff-utils](https://code.google.com/p/java-diff-utils/)
+**Original code and docs were forked from:** [java-diff-utils](https://code.google.com/p/java-diff-utils/).
+The original author created his own fork at <https://github.com/dnaumenko/java-diff-utils>.
 
 ## Main Features
 
