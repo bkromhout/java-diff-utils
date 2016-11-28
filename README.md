@@ -80,3 +80,9 @@ This library implements Myers' diff algorithm, but it is modular so it is easy t
 - add Guava to dependency
 - let user uses other string to represent line which does not exist
 - implement event based parser like SAX (in difflib.event package)
+
+### License
+
+The license of the library is Apache-2.0.
+Until version 1.3.1, the license was Apache-1.1.
+The files in the directory `java-diff-utils-lib/src/main/java/difflib/myers` are subject to LGPL-2.1.
