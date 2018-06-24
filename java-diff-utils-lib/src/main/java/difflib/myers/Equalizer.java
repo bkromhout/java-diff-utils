@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 /**
  * Specifies when two compared elements in the Myers algorithm are equal.
  * 
- * @param T The type of the compared elements in the 'lines'.
+ * @param <T> The type of the compared elements in the 'lines'.
  */
 public interface Equalizer<T> {
 
@@ -17,7 +17,7 @@ public interface Equalizer<T> {
      * @return Returns true if the elements are equal.
      */
     @CheckReturnValue
-    public boolean equals(@Nullable T original, @Nullable T revised);
+    boolean equals(@Nullable T original, @Nullable T revised);
 
     /**
      * Indicates if elements must be skipped.
@@ -25,5 +25,5 @@ public interface Equalizer<T> {
      * @return
      */
     @CheckReturnValue
-    public boolean skip(@Nullable T original);
+    boolean skip(@Nullable T original);
 }

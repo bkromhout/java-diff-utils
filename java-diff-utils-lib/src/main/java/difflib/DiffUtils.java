@@ -28,13 +28,12 @@ import java.util.regex.Pattern;
 
 /**
  * Implements the difference and patching engine
- * @param T The type of the compared elements in the 'lines'.
  * @author <a href="dm.naumenko@gmail.com">Dmitry Naumenko</a>
  * @version 0.4.1
  */
 public class DiffUtils {
 
-    private static Pattern unifiedDiffChunkRe = Pattern
+    private static final Pattern unifiedDiffChunkRe = Pattern
             .compile("^@@\\s+-(?:(\\d+)(?:,(\\d+))?)\\s+\\+(?:(\\d+)(?:,(\\d+))?)\\s+@@$");
 
     private List<String> readLines(@Nonnull File file) {

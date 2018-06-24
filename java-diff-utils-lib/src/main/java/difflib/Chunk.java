@@ -15,16 +15,17 @@
  */
 package difflib;
 
-import javax.annotation.Nonnegative;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Nonnegative;
 
 /**
  * Holds the information about the part of text involved in the diff process <p> Text is represented as
  * <code>Object[]</code> because the diff engine is capable of handling more than plain ascci. In fact, arrays or lists
  * of any type that implements {@link java.lang.Object#hashCode hashCode()} and {@link java.lang.Object#equals equals()}
  * correctly can be subject to differencing using this library. </p>
- * @param T The type of the compared elements in the 'lines'.
+ * @param <T> The type of the compared elements in the 'lines'.
  * @author <a href="dm.naumenko@gmail.com>Dmitry Naumenko</a>
  */
 public class Chunk<T> {
@@ -102,11 +103,6 @@ public class Chunk<T> {
         return getPosition() + size() - 1;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#hashCode()
-     */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -117,11 +113,6 @@ public class Chunk<T> {
         return result;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -136,9 +127,7 @@ public class Chunk<T> {
                 return false;
         } else if (!lines.equals(other.lines))
             return false;
-        if (position != other.position)
-            return false;
-        return true;
+        return position == other.position;
     }
 
     @Override

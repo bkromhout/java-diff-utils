@@ -21,7 +21,7 @@ import java.util.*;
  * Describes the delta between original and revised texts.
  * 
  * @author <a href="dm.naumenko@gmail.com">Dmitry Naumenko</a>
- * @param T The type of the compared elements in the 'lines'.
+ * @param <T> The type of the compared elements in the 'lines'.
  */
 public abstract class Delta<T> {
 	
@@ -35,7 +35,7 @@ public abstract class Delta<T> {
      * Specifies the type of the delta.
      *
      */
-    public static enum TYPE {
+    public enum TYPE {
     	/** A change in the original. */
         CHANGE, 
         /** A delete from the original. */
@@ -143,11 +143,10 @@ public abstract class Delta<T> {
         } else if (!original.equals(other.original))
             return false;
         if (revised == null) {
-            if (other.revised != null)
-                return false;
-        } else if (!revised.equals(other.revised))
-            return false;
-        return true;
+            return other.revised == null;
+        } else {
+            return revised.equals(other.revised);
+        }
     }
     
 }
