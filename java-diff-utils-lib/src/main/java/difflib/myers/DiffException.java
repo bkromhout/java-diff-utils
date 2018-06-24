@@ -5,6 +5,7 @@
  * The Apache Software License, Version 1.1
  *
  * Copyright (c) 1999-2003 The Apache Software Foundation.
+ * Copyright (c) 1996-2006 Juancarlo Añez
  * Copyright (c) 2010 Dmitry Naumenko (dm.naumenko@gmail.com)
  * Copyright (c) 2015-2016 Brenden Kromhout and contributors to java-diff-utils
  * All rights reserved.

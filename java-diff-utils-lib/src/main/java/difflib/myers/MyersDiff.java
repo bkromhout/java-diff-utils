@@ -5,6 +5,7 @@
  * The Apache Software License, Version 1.1
  *
  * Copyright (c) 1999-2003 The Apache Software Foundation.
+ * Copyright (c) 1996-2006 Juancarlo Añez
  * Copyright (c) 2010 Dmitry Naumenko (dm.naumenko@gmail.com)
  * Copyright (c) 2015-2016 Brenden Kromhout and contributors to java-diff-utils
  * All rights reserved.
@@ -59,12 +60,18 @@
 
 package difflib.myers;
 
-import difflib.*;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import difflib.ChangeDelta;
+import difflib.Chunk;
+import difflib.DeleteDelta;
+import difflib.Delta;
+import difflib.DiffAlgorithm;
+import difflib.InsertDelta;
+import difflib.Patch;
 
 /**
  * A clean-room implementation of <a href="http://www.cs.arizona.edu/people/gene/">
