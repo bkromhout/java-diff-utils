@@ -1,10 +1,11 @@
 # java-diff-utils
 
-The java-diff-utils library is for computing diffs, applying patches, generation side-by-side view in Java.
+> A library is for computing diffs, applying patches, generation side-by-side view in Java.
 
-It is an open source library for performing comparison operations between chunks of text: computing diffs, applying patches, generating unified diffs or parsing them, generating diff output for easy future display (like a side-by-side view) and so on.
+`java-diff-utils` is an open source library for performing comparison operations between chunks of text: computing diffs, applying patches, generating unified diffs or parsing them, generating diff output for easy future display (like a side-by-side view) and so on.
 
-The main reason for creating this library was the lack of easy-to-use libraries with all the usual features necessary for working with diff files. Originally it was inspired by the JRCS library and its nice diff module design.
+The main reason for creating this library was the lack of easy-to-use libraries with all the usual features necessary for working with diff files.
+Originally it was inspired by the [JRCS library](https://bitbucket.org/apalala/jrcs) and its nice diff module design.
 
 **Original code and docs were forked from:** [java-diff-utils](https://code.google.com/p/java-diff-utils/).
 The original author created his own fork at <https://github.com/dnaumenko/java-diff-utils>.
@@ -80,3 +81,10 @@ This library implements Myers' diff algorithm, but it is modular so it is easy t
 - add Guava to dependency
 - let user uses other string to represent line which does not exist
 - implement event based parser like SAX (in difflib.event package)
+
+## License
+
+This work is licensed under The Apache Software License, Version 1.1.
+Reason: The code contains work of HP, which contributed it under Apache-1.1.
+[[Example code](https://github.com/apache/wicket/blob/master/wicket-util/src/main/java/org/apache/wicket/util/diff/Delta.java)).
+It was easier to change the license to Apache-1.1 than to contact HP Legal for a code created in 2003 at HP Bristol.
