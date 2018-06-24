@@ -44,6 +44,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Default class-name is now `null` for deleted and inserted data, and "`change`" for change data
 - Default tag for deleted data is `del`
 - Default tag for inserted data is `ins`
+- Changed build system from Maven to Gradle
 
 ## 1.5.0 – 2014-05-22
 
