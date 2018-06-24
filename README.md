@@ -85,6 +85,20 @@ This library implements Myers' diff algorithm, but it is modular so it is easy t
 ## License
 
 This work is licensed under The Apache Software License, Version 1.1.
+
 Reason: The code contains work of HP, which contributed it under Apache-1.1.
 [[Example code](https://github.com/apache/wicket/blob/master/wicket-util/src/main/java/org/apache/wicket/util/diff/Delta.java)).
 It was easier to change the license to Apache-1.1 than to contact HP Legal for a code created in 2003 at HP Bristol.
+
+I had a discussion with [Juancarlo](https://bitbucket.org/apalala/) and Brian McBride.
+Brian worked for HPLabs in Bristol (UK) at that time. His authorship appears in three files:
+
+- https://github.com/apache/wicket/blob/master/wicket-util/src/main/java/org/apache/wicket/util/diff/DiffAlgorithm.java
+- https://github.com/apache/wicket/blob/master/wicket-util/src/main/java/org/apache/wicket/util/diff/Revision.java
+- https://github.com/apache/wicket/blob/master/wicket-util/src/main/java/org/apache/wicket/util/diff/Delta.java
+
+All other files at JRCS are (according to Juancarlo) 100% authored by Juancarlo in a cleanroom way.
+
+Since Brian pointed me to HP and I do not want to fight with HP, I agreed with Juancarlo to change the license of the JRCS files to Apache-1.1.
+
+The alternative is to find out which code was written by Brian and to replace this code by some other clean room developed code.
