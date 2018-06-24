@@ -24,7 +24,7 @@ import java.util.ListIterator;
  * Describes the patch holding all deltas between the original and revised texts.
  * 
  * @author <a href="dm.naumenko@gmail.com">Dmitry Naumenko</a>
- * @param T The type of the compared elements in the 'lines'.
+ * @param <T> The type of the compared elements in the 'lines'.
  */
 public class Patch<T> {
     private List<Delta<T>> deltas = new LinkedList<Delta<T>>();

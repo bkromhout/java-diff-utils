@@ -388,7 +388,7 @@ public class DiffRowGenerator {
         return diffRows;
     }
 
-    private static final void addChangeDiffRow(Equalizer<String> equalizer, List<DiffRow> diffRows, String orgLine,
+    private static void addChangeDiffRow(Equalizer<String> equalizer, List<DiffRow> diffRows, String orgLine,
                                                String revLine, String defaultString) {
         boolean skipOrg = equalizer.skip(orgLine);
         boolean skipRev = equalizer.skip(revLine);
@@ -472,7 +472,7 @@ public class DiffRowGenerator {
         return tempList;
     }
 
-    private static final LinkedList<String> charArrayToStringList(char[] cs) {
+    private static LinkedList<String> charArrayToStringList(char[] cs) {
         LinkedList<String> result = new LinkedList<String>();
         for (Character character : cs) {
             result.add(character.toString());

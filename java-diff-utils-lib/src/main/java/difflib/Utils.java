@@ -21,7 +21,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Utils {
-    public static Charset UTF_8 = Charset.forName("UTF-8");
+    public static final Charset UTF_8 = Charset.forName("UTF-8");
 
     /**
      * Replaces all tabs with 4 spaces.

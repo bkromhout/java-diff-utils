@@ -23,7 +23,7 @@ import difflib.myers.Equalizer;
  * The general interface for computing diffs between two lists of elements of type T. 
  * 
  * @author <a href="dm.naumenko@gmail.com">Dmitry Naumenko</a>
- * @param T The type of the compared elements in the 'lines'.
+ * @param <T> The type of the compared elements in the 'lines'.
  */
 public interface DiffAlgorithm<T> {
     
@@ -35,7 +35,7 @@ public interface DiffAlgorithm<T> {
      * @param revised The revised sequence. Must not be {@code null}.
      * @return The patch representing the diff of the given sequences. Never {@code null}.
      */
-    public Patch<T> diff(T[] original, T[] revised);
+    Patch<T> diff(T[] original, T[] revised);
     
     /**
      * Computes the difference between the original sequence and the revised
@@ -45,11 +45,11 @@ public interface DiffAlgorithm<T> {
      * @param revised The revised sequence. Must not be {@code null}.
      * @return The patch representing the diff of the given sequences. Never {@code null}.
      */
-    public Patch<T> diff(List<T> original, List<T> revised);
+    Patch<T> diff(List<T> original, List<T> revised);
     
     /**
      * Get equalizer use to compare data.
      * @return
      */
-    public Equalizer<T> getEqualizer();
+    Equalizer<T> getEqualizer();
 }

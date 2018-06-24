@@ -36,7 +36,7 @@ public class DiffRow {
         this.newLine = newLine;
     }
 
-    public static enum Tag {
+    public enum Tag {
         INSERT, DELETE, CHANGE, EQUAL, SKIP
     }
 
@@ -125,11 +125,8 @@ public class DiffRow {
         } else if (!oldLine.equals(other.oldLine))
             return false;
         if (tag == null) {
-            if (other.tag != null)
-                return false;
-        } else if (!tag.equals(other.tag))
-            return false;
-        return true;
+            return other.tag == null;
+        } else return tag.equals(other.tag);
     }
 
     public String toString() {

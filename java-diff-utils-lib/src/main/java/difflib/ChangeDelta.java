@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * Describes the change-delta between original and revised texts.
- * @param T The type of the compared elements in the 'lines'.
+ * @param <T> The type of the compared elements in the 'lines'.
  * @author <a href="dm.naumenko@gmail.com">Dmitry Naumenko</a>
  */
 public class ChangeDelta<T> extends Delta<T> {
