@@ -1,4 +1,4 @@
-# java-diff-utils
+# java-diff-utils [![Build Status](https://travis-ci.org/java-diff-utils/java-diff-utils.svg?branch=master)](https://travis-ci.org/java-diff-utils/java-diff-utils)
 
 > A library is for computing diffs, applying patches, generation side-by-side view in Java.
 
@@ -20,19 +20,14 @@ The original author created his own fork at <https://github.com/dnaumenko/java-d
 
 ## Installation
 
-Since version 2.1.1, this fork of java-diff-utils is hosted on Bintray's jcenter. This means you can add java-diff-utils as a dependency to your project using Gradle.
+Since version 2.2.0, this fork of java-diff-utils is hosted on Maven Central.
+This means you can add java-diff-utils as a dependency to your project using Gradle.
 
-Ensure that you have `jcenter()` defined as a repository:
-```groovy
-repositories {
-    jcenter()
-}
-```
+Add java-diff-utils to your dependencies like this:
 
-Then add java-diff-utils to your dependencies like this:
 ```groovy
 dependencies {
-    compile 'com.github.bkromhout:java-diff-utils:{latest version}'
+    compile 'io.github.java-diff-utils:java-diff-utils:2.2.0'
 }
 ```
 
@@ -40,7 +35,7 @@ dependencies {
 
 This library implements Myers' diff algorithm, but it is modular so it is easy to replace the algorithm with another which might be better suited to your needs.
 
-# Tutorial
+## Tutorial
 
 * In Spanish: [Comparar Ficheros java-diff-utils](https://www.adictosaltrabajo.com/tutoriales/comparar-ficheros-java-diff-utils/)
 
