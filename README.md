@@ -58,4 +58,6 @@ All other files at JRCS are (according to Juancarlo) 100% authored by Juancarlo 
 
 Since Brian pointed me to HP and I do not want to fight with HP, I agreed with Juancarlo to change the license of the JRCS files to Apache-1.1.
 
-The alternative is to find out which code was written by Brian and to replace this code by some other clean room developed code.
+More reading on JRCS and java-diff-utils license issues: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=696165 and https://bugzilla.redhat.com/show_bug.cgi?id=1013039.
+
+The alternative to Apache-1.1 license is to find out which code was written by Brian and to replace this code by some other clean room developed code.
