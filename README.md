@@ -44,7 +44,7 @@ This library implements Myers' diff algorithm, but it is modular so it is easy t
 This work is licensed under The Apache Software License, Version 1.1.
 
 Reason: The code contains work of HP, which contributed it under Apache-1.1.
-[[Example code](https://github.com/apache/wicket/blob/master/wicket-util/src/main/java/org/apache/wicket/util/diff/Delta.java)).
+[[Example code](https://github.com/apache/wicket/blob/master/wicket-util/src/main/java/org/apache/wicket/util/diff/Delta.java)].
 It was easier to change the license to Apache-1.1 than to contact HP Legal for a code created in 2003 at HP Bristol.
 
 I had a discussion with [Juancarlo](https://bitbucket.org/apalala/) and Brian McBride.
