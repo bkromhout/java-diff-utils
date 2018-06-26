@@ -68,6 +68,7 @@ signing {
     sign configurations.archives
 }
 
+// See https://central.sonatype.org/pages/gradle.html for a documentation
 uploadArchives {
     repositories {
         mavenDeployer {
