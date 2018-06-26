@@ -81,9 +81,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - switch from JDK5 to JDK7
 
-[Unreleased]: https://github.com/koppor/java-diff-utils/compare/2.1.1...HEAD
-[2.1.1]: https://github.com/koppor/java-diff-utils/compare/2.1.0...2.1.1
-[2.1.0]: https://github.com/koppor/java-diff-utils/compare/2.0.0...2.1.0
-[2.0.0]: https://github.com/koppor/java-diff-utils/compare/1.5.0...2.0.0
-[1.5.0]: https://github.com/koppor/java-diff-utils/compare/1.4.1...1.5.0
-[1.4.1]: https://github.com/koppor/java-diff-utils/compare/1.4.0...1.4.1
+[Unreleased]: https://github.com/java-diff-utils/java-diff-utils/compare/2.1.1...HEAD
+[2.1.1]: https://github.com/java-diff-utils/java-diff-utils/compare/2.1.0...2.1.1
+[2.1.0]: https://github.com/java-diff-utils/java-diff-utils/compare/2.0.0...2.1.0
+[2.0.0]: https://github.com/java-diff-utils/java-diff-utils/compare/1.5.0...2.0.0
+[1.5.0]: https://github.com/java-diff-utils/java-diff-utils/compare/1.4.1...1.5.0
+[1.4.1]: https://github.com/java-diff-utils/java-diff-utils/compare/1.4.0...1.4.1
