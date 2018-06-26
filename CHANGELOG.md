@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Main repository is now <https://github.com/java-diff-utils/java-diff-utils/>
 - The groupid is now `io.github.java-diff-utils`
 
+### Fixed
+
+- Empty-context add-only patches were applied in the wrong place, typically one line early
 
 ## [2.1.1] – 2016-10-24
 
