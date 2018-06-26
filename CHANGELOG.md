@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.2.0] – 2018-06-26
 
 ### Changed
 
 - Main repository is now <https://github.com/java-diff-utils/java-diff-utils/>
 - The groupid is now `io.github.java-diff-utils`
+- Published on maven central
 
 ### Fixed
 
@@ -81,7 +82,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - switch from JDK5 to JDK7
 
-[Unreleased]: https://github.com/java-diff-utils/java-diff-utils/compare/2.1.1...HEAD
+[Unreleased]: https://github.com/java-diff-utils/java-diff-utils/compare/2.2.0...HEAD
+[2.2.0]: https://github.com/java-diff-utils/java-diff-utils/compare/2.1.1...2.2.0
 [2.1.1]: https://github.com/java-diff-utils/java-diff-utils/compare/2.1.0...2.1.1
 [2.1.0]: https://github.com/java-diff-utils/java-diff-utils/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/java-diff-utils/java-diff-utils/compare/1.5.0...2.0.0
