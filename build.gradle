@@ -1,29 +1,114 @@
-buildscript {
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+group = 'io.github.java-diff-utils'
+archivesBaseName = 'java-diff-utils'
+version = '2.2.0-SNAPSHOT'
+
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
+
+dependencies {
+    compile group: 'com.google.code.findbugs', name: 'jsr305', version:'3.0.0'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-library', version:'1.3'
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+}
+
+compileJava {
+    // files are all encoded using UTF-8
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    // files are all encoded using UTF-8
+    options.encoding = 'UTF-8'
+}
+
+javadoc {
+    failOnError = false
+    options {
+        // files are all encoded using UTF-8
+        encoding = 'UTF-8'
+        version = true
+        author = true
+    }
+}
+
+jar {
+    manifest {
+        attributes('Automatic-Module-Name': 'io.github.adr.embedded')
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+signing {
+    sign configurations.archives
+}
+
+uploadArchives {
     repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.4.0' // clean build uploadLib -PdryRun=false
-    }
-}
+        mavenDeployer {
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
-ext {
-    if (file("private.properties").exists()) {
-        Properties props = new Properties()
-        props.load(new FileInputStream(file("private.properties")))
-        BINTRAY_KEY = props.getProperty('BINTRAY_KEY')
-    } else {
-        BINTRAY_KEY = ""
-    }
-}
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
 
-task uploadLib {
-    dependsOn ':java-diff-utils-lib:bintrayUpload'
-}
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
 
-allprojects {
-    repositories {
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-        maven { url "http://repo.maven.apache.org/maven2" }
+            pom.project {
+                name 'Java Diff Utils'
+                packaging 'jar'
+                // optionally artifactId can be defined here
+                description 'A library for computing diffs, applying patches, generation side-by-side view in Java'
+                url 'https://github.com/java-diff-utils/java-diff-utils'
+
+                scm {
+                    connection 'scm:git:https://github.com/java-diff-utils/java-diff-utils.git'
+                    developerConnection 'scm:git:github.com:java-diff-utils/java-diff-utils.git'
+                    url 'https://github.com/java-diff-utils/java-diff-utils/tree/master'
+                }
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 1.1'
+                        url 'http://www.apache.org/licenses/LICENSE-1.1'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'koppor'
+                        name 'Oliver Kopp'
+                        email 'kopp.dev@gmail.com'
+                    }
+                }
+            }
+        }
     }
 }

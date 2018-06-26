@@ -1,6 +1,6 @@
 # java-diff-utils [![Build Status](https://travis-ci.org/java-diff-utils/java-diff-utils.svg?branch=master)](https://travis-ci.org/java-diff-utils/java-diff-utils)
 
-> A library is for computing diffs, applying patches, generation side-by-side view in Java.
+> A library for computing diffs, applying patches, generation side-by-side view in Java.
 
 `java-diff-utils` is an open source library for performing comparison operations between chunks of text: computing diffs, applying patches, generating unified diffs or parsing them, generating diff output for easy future display (like a side-by-side view) and so on.
 
