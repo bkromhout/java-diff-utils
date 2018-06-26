@@ -4,6 +4,10 @@ jdk:
 - oraclejdk8
 - oraclejdk9
 
+# disable ./gradlew assemble
+install:
+- true
+
 script:
 - ./gradlew check --info
 - ./gradlew javadoc
