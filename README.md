@@ -7,9 +7,6 @@
 The main reason for creating this library was the lack of easy-to-use libraries with all the usual features necessary for working with diff files.
 Originally it was inspired by the [JRCS library](https://bitbucket.org/apalala/jrcs) and its nice diff module design.
 
-**Original code and docs were forked from:** [java-diff-utils](https://code.google.com/p/java-diff-utils/).
-The original author created his own fork at <https://github.com/dnaumenko/java-diff-utils>.
-
 ## Main Features
 
 * Computing the difference between two chunks of text.
@@ -38,6 +35,16 @@ This library implements Myers' diff algorithm, but it is modular so it is easy t
 ## Tutorial
 
 * In Spanish: [Comparar Ficheros java-diff-utils](https://www.adictosaltrabajo.com/tutoriales/comparar-ficheros-java-diff-utils/)
+
+## Other variants of this library
+
+The library was originally hosted on Google Code at <https://code.google.com/p/java-diff-utils/>.
+This library is a fork originally created by @bkromhout.
+
+Since GitHub does not connect forks based on Google Code, other variants appeared in parallel:
+
+- https://github.com/dnaumenko/java-diff-utils - Created by the original Google Code maintainer
+- https://github.com/wumpz/java-diff-utils - Created from the Google Code repository [starting in 2017](https://github.com/wumpz/java-diff-utils/commit/42fde56154afd92d2b9ef8e088185e7af0230cee).
 
 ## License
 
