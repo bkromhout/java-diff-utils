@@ -39,7 +39,7 @@ This library implements Myers' diff algorithm, but it is modular so it is easy t
 ## Other variants of this library
 
 The library was originally hosted on Google Code at <https://code.google.com/p/java-diff-utils/>.
-This library is a fork originally created by @bkromhout.
+This library is a fork originally created by @KengoTODA ([published on maven central](https://mvnrepository.com/artifact/jp.skypencil.java-diff-utils/diffutils) using the group id `jp.skypencil.java-diff-utils`) and enhanced by @bkromhout.
 
 Since GitHub does not connect forks based on Google Code, other variants appeared in parallel:
 
