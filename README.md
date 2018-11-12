@@ -1,4 +1,6 @@
-# java-diff-utils [![Build Status](https://travis-ci.org/java-diff-utils/java-diff-utils.svg?branch=master)](https://travis-ci.org/java-diff-utils/java-diff-utils) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.java-diff-utils/java-diff-utils/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.java-diff-utils/java-diff-utils)
+# (outdated) java-diff-utils [![Build Status](https://travis-ci.org/java-diff-utils/java-diff-utils.svg?branch=master)](https://travis-ci.org/java-diff-utils/java-diff-utils) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.java-diff-utils/java-diff-utils/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.java-diff-utils/java-diff-utils)  [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+> **The maintained successor if this library is https://github.com/java-diff-utils/java-diff-utils**
 
 > A library for computing diffs, applying patches, generation side-by-side view in Java.
 
@@ -44,7 +46,7 @@ This library is a fork originally created by @KengoTODA ([published on maven cen
 Since GitHub does not connect forks based on Google Code, other variants appeared in parallel:
 
 - https://github.com/dnaumenko/java-diff-utils - Created by the original Google Code maintainer
-- https://github.com/wumpz/java-diff-utils - Created from the Google Code repository [starting in 2017](https://github.com/wumpz/java-diff-utils/commit/42fde56154afd92d2b9ef8e088185e7af0230cee).
+- https://github.com/wumpz/java-diff-utils - Created from the Google Code repository [starting in 2017](https://github.com/wumpz/java-diff-utils/commit/42fde56154afd92d2b9ef8e088185e7af0230cee). Now maintained at http://github.com/java-diff-utils/java-diff-utils.
 
 ## License
 
